@@ -3,35 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Ecommerce Store</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Shop</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="cart-items" id="cart-items">
-            <!-- Dynamically populated cart items -->
-        </section>
+    <nav>
+        <a href="index.html" class="logo">Ecommerce.</a>
+        <a href="cart.html" class="cart-icon">
+            <i class="ri-shopping-bag-line"></i>
+            <span class="cart-item-count"></span> <!-- Cart item count displayed here -->
+        </a>
+    </nav>
 
-        <section class="checkout">
-            <button onclick="checkout()">Proceed to Checkout</button>
-        </section>
-    </main>
+    <div class="cart">
+        <div class="cart-header">
+            <span>Products</span>
+            <span>Price</span>
+            <span>Quantity</span>
+            <span>Total</span>
+            <span>Remove</span>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 Ecommerce Store</p>
-    </footer>
+        <div class="cart-items">
+            <!-- Cart items will be populated here dynamically via JavaScript -->
+        </div>
+        
+        <div class="cart-total">
+            <h3>Cart Total</h3>
+            <p>Subtotal <span class="subtotal">$0</span></p>
+            <p>Delivery Fee<span>Free</span></p>
+            <p>Grand Total <span class="grand-total">$0</span></p>
+            <button class="btn">Proceed to checkout</button>
+        </div>
+    </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/products.js"></script> <!-- Make sure this contains your product data -->
+    <script src="js/script.js"></script>   <!-- This will handle cart logic and updates -->
+    
 </body>
 </html>
